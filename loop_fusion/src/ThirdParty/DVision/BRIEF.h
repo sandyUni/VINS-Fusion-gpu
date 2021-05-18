@@ -30,6 +30,9 @@
 #define __D_BRIEF__
 
 #include <opencv2/opencv.hpp>
+#if CV_VERSION_MAJOR >= 4
+    #include <opencv2/imgproc/imgproc_c.h>
+#endif 
 #include <vector>
 #include <boost/dynamic_bitset.hpp>
 

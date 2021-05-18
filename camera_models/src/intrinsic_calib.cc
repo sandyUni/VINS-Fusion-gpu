@@ -6,6 +6,9 @@
 #include <iostream>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
+#if CV_VERSION_MAJOR >= 4
+    #include <opencv2/imgproc/imgproc_c.h>
+#endif
 #include <opencv2/imgproc/imgproc.hpp>
 
 #include "camodocal/calib/CameraCalibration.h"

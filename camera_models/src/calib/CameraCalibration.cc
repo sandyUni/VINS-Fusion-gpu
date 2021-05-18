@@ -8,6 +8,9 @@
 #include <fstream>
 #include <opencv2/core/core.hpp>
 #include <opencv2/core/eigen.hpp>
+#if CV_VERSION_MAJOR >= 4
+    #include <opencv2/imgproc/imgproc_c.h>
+#endif 
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/calib3d/calib3d.hpp>
 
@@ -232,7 +235,7 @@ CameraCalibration::drawResults(std::vector<cv::Mat>& images) const
         cv::Mat& image = images.at(i);
         if (image.channels() == 1)
         {
-            cv::cvtColor(image, image, CV_GRAY2RGB);
+           cv::cvtColor(image, image, CV_GRAY2RGB);
         }
 
         std::vector<cv::Point2f> estImagePoints;

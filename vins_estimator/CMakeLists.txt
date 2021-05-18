@@ -17,7 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
     image_transport)
 
 #find_package(OpenCV REQUIRED)
-include(/home/dji/opencv/build/OpenCVConfig.cmake)
+include(/home/laijun/projects/opencv_base/opencv-4.2.0/opencv-4.2.0/build/OpenCVConfig.cmake)
 #message(WARNING "OpenCV_VERSION: ${OpenCV_VERSION}")
 
 find_package(Ceres REQUIRED)

@@ -18,6 +18,9 @@
 #include <csignal>
 #include <opencv2/opencv.hpp>
 #include <eigen3/Eigen/Dense>
+#if CV_VERSION_MAJOR >= 4
+    #include <opencv2/imgproc/imgproc_c.h>
+#endif 
 #include <opencv2/cudaoptflow.hpp>
 #include <opencv2/cudaimgproc.hpp>
 #include <opencv2/cudaarithm.hpp>
